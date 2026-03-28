@@ -5,18 +5,14 @@
 int main() {
     int gd = DETECT, gm;
     int x = 320, y = 240;
-    int r, color = 1;
+    int r;
 
     initgraph(&gd, &gm, "C:\\TURBOC3\\BGI");
 
-    for (r = 20; r <= 200; r = r + 20) {
-        setcolor(color);
-        circle(x, y, r);
-        color++;
+    setcolor(WHITE); 
 
-        if (color > 15) {
-            color = 1;
-        }
+    for (r = 20; r <= 200; r = r + 20) {
+        circle(x, y, r);
     }
 
     getch();
